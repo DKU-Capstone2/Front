@@ -1,38 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
 .App {
+  padding-left: 20px;
+  padding-right: 20px;
+  zoom: 75%;
+}
+
+body {
+  background-color: #5e7e9b;
+  display: flex;
+  justify-content: center;
+  font-family: "Nanum Pen Script";
+  margin: 0px;
+  height: 1100px;
+}
+
+/* Header */
+
+header {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  font-weight: bold;
+  padding: 30px;
+  margin-top: 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+header > div {
+  display: flex;
+}
+
+header button {
+  width: 20%;
+  font-size: 30px;
+  border: none;
+  font-family: "Nanum Pen Script";
+  color: #5e7e9b;
+}
+
+header .logo button {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+header .commision {
+  margin-right: 580px;
+}
+
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Nanum Pen Script";
+  background-color: aliceblue;
+  white-space: nowrap; /*글자가 버튼을 초과하지 않도록*/
+}
+
+/* 카테고리 */
+
+.CategoryList {
+  padding: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.CategoryList div button {
+  font-size: 25px;
+  font-weight: bold;
+  color: #5e7e9b;
+}
+
+/* 작가리스트 */
+
+.WriterList .menu_wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.WriterList .ControlMenu {
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: aliceblue;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 작가 리스트 요소 */
+
+.WriterItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid aliceblue;
+  border-bottom: 1px solid aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.WriterItem .img_wrapper {
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.WriterItem .info_wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.WriterItem .writer_name {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.WriterItem .writer_category {
+  font-size: 20px;
+}
+
+.WriterItem .writer_information {
+  font-size: 25px;
+}
+
+.WriterItem .btn_wrapper {
+  width: 230px;
+  height: 50px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.WriterItem .btn_wrapper .MyButton {
+  font-weight: bold;
+  font-size: 20px;
+  color: #5e7e9b;
+}
+
+/* Menu */
+
+.MyMenu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.MyMenu > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MyMenu .firstMenu {
+  background-color: #5e7e9b;
+  border-radius: 5px;
+}
+
+.MyMenu .secondMenu {
+  background-color: #5e7e9b;
+  border-radius: 5px;
+}
+
+.MyMenu .thirdMenu {
+  background-color: #5e7e9b;
+  border-radius: 5px;
+}
+
+.MyMenu .firstMenu button {
+  background-color: #5e7e9b;
+}
+
+.MyMenu .secondMenu button {
+  background-color: #5e7e9b;
+}
+
+.MyMenu .thirdMenu button {
+  background-color: #5e7e9b;
+}
+
+/* Writer */
+
+.profileList .MyMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.profileList .MyMenu .MyButton {
+  color: aliceblue;
+}
+
+.profileList .MyMenu .secondMenu {
+  margin-left: 700px;
+}
+
+.writerProfile {
+  margin-top: 30px;
   text-align: center;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.writerProfile .imgProfile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.writerProfile .mainProfile {
+  background-color: aliceblue;
+  min-height: 350px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.writerProfile .profileName {
+  margin-top: 10px;
+}
+
+.writerProfile .profileState {
+  color: tomato;
+  margin: 10px auto;
+  width: 100px;
+  border: 1px solid tomato;
+}
+
+.writerProfile .profileContent {
+  margin-top: 10px;
+}
+
+.profileMenu {
+  margin-top: 30px;
+}
+
+.profileMenu .MyMenu {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 30px;
+  background-color: aliceblue;
+}
+
+.profileMenu .MyMenu .MyButton {
+  color: aliceblue;
+}
+
+.profileMenu .MyMenu .firstMenu,
+.secondMenu {
+  margin-right: 30px;
+}
+
+.defaultPage {
+  border-radius: 5px;
+  width: 100%;
+  height: 600px;
+  overflow: scroll;
+  background-color: aliceblue;
+  color: #5e7e9b;
+}
+
+.defaultPage h3 {
+  width: 700px;
+  padding: 10px;
+  border-bottom: 3px solid #5e7e9b;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* 커미션 신청 폼 & 수정 폼 */
+
+.MyEditor {
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 5px;
+  height: 550px;
+  padding: 20px;
+}
+
+.MyEditor .input_title {
+  border: none;
+  width: 45%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  background-color: #ececec;
+}
+
+.MyEditor textarea {
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  min-height: 250px;
+  resize: vertical;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 20px;
+}
+
+.commisionform {
+  margin-top: 30px;
+  color: #5e7e9b;
+}
+
+.commisionform .MyMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.commisionform .MyMenu .MyButton {
+  color: aliceblue;
+}
+
+/* 메인페이지 */
+.MainPage {
+  margin-top: 30px;
+}
+
+.MainPage img {
+  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.MainPage .writersImg {
+  height: 600px;
+}
+
+.MainPage .Intro .MyMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  background-color: #5e7e9b;
+  color: aliceblue;
+}
+
+.MainPage .Intro .MyButton {
+  width: 550px;
+  color: aliceblue;
+  background-color: #5e7e9b;
+}
+
+.MainPage .MainCategoryList {
+  margin-top: 30px;
+}
+
+/* 로그인 페이지 */
+
+.loginpage {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  color: #5e7e9b;
+}
+
+.loginfield {
+  font-size: 25px;
+  width: 300px;
+  border: 1px solid #5e7e9b;
+  margin-top: 10px;
+}
+
+.loginpage {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.Title {
+  padding-top: 10px;
+}
+
+.loginform h3 {
+  margin: 0 auto;
+  line-height: 50px;
+  width: 300px;
+  text-align: left;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.submitBtn {
+  font-size: 15px;
+  width: 308px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+  border: 1px solid #5e7e9b;
+  background-color: white;
+  font-family: "Nanum Pen Script";
+  color: #5e7e9b;
+}
+
+.joinpage .MyButton {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #5e7e9b;
+}
+
+/* 회원가입 */
+
+.signuppage {
+  width: 500px;
+  height: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  color: #5e7e9b;
+}
+.signUpForm {
+  font-size: 20px;
+  width: 300px;
+  height: 35px;
+  border: 1px solid #5e7e9b;
+}
+
+.signuppage h4 {
+  margin: 0 auto;
+  line-height: 50px;
+  width: 300px;
+  text-align: left;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.role_input {
+  width: 308px;
+  border: 1px solid #5e7e9b;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  padding: 5px;
+  color: #5e7e9b;
+  font-family: "Nanum Pen Script";
+}
+
+.signupbtn {
+  font-size: 15px;
+  width: 308px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+  border: 1px solid #5e7e9b;
+  color: #5e7e9b;
+  background-color: aliceblue;
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+/* 이용약관 */
+
+.agreement {
+  width: 300px;
+  height: 150px;
+  overflow: auto;
+  border: 1px solid #5e7e9b;
+  padding: 1px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+}
+
+.checkAgreement {
+  text-align: left;
+  margin-left: 95px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+/* 커미션 리스트 */
+
+.CommisionListBlock {
+  margin-top: 30px;
+}
+
+.CommisionList {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid aliceblue;
+  background-color: #5e7e9b;
+}
+
+.CommisionList .MyButton {
+  width: 400px;
+  border: 1px solid #5e7e9b;
+  color: aliceblue;
+  background-color: #5e7e9b;
+}
+
+.CommisionArea {
+  margin-top: 10px;
+}
+
+.CommisionAreaDetail {
+  border-radius: 5px;
+  width: 100%;
+  height: 600px;
+  overflow: scroll;
+  background-color: aliceblue;
+  color: #5e7e9b;
+  margin-top: 20px;
+}
+
+.CommisionAreaDetail h1 {
+  text-align: center;
+  width: 700px;
+  border-bottom: 3px solid #5e7e9b;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* 개인정보변경 페이지 */
+
+.MyInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MyInfo .MyInfoTitle .MyPageList {
+  width: 250px;
+  height: 900px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.MyInfo .MyInfoTitle .MyPageList .MyButton {
+  text-align: center;
+  height: 50px;
+  padding: 40px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MyInfo .MyInfoContent {
+  margin-top: 30px;
+  width: 940px;
+  height: 960px;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.MyInfo .MyInfoContent .DefaultMyPage {
+  height: 960px;
+  padding: 20px;
+}
+
+.MyInfo .MyInfoContent .DefaultMyPage h1 {
+  text-align: center;
+  color: #5e7e9b;
+  width: 700px;
+  border-bottom: 3px solid #5e7e9b;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.Area {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.MyInfoForm {
+  text-align: center;
+  color: #5e7e9b;
+}
+
+.MyInfoForm input {
+  font-size: 25px;
+  width: 300px;
+  border: 1px solid #5e7e9b;
+  font-family: "Nanum Pen Script";
+  padding: 5px;
+  color: #5e7e9b;
+  margin-top: 5px;
+}
+
+.btndiv {
+  margin-top: 30px;
+}
+
+.changeStateDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  margin: 0 auto;
+}
+
+.changeStateDiv > div {
+  width: 50px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+}
+
+.changeState {
+  width: 308px;
+  border: 1px solid #5e7e9b;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  padding: 5px;
+  color: #5e7e9b;
+  font-family: "Nanum Pen Script";
+}
+
+/* 비밀번호변경 페이지 */
+.changePassword {
+  margin-top: 30px;
+  text-align: center;
+  color: #5e7e9b;
+}
+
+.changePassword input {
+  font-size: 25px;
+  width: 300px;
+  border: 1px solid #5e7e9b;
+  font-family: "Nanum Pen Script";
+  padding: 5px;
+  color: #5e7e9b;
+  margin-top: 5px;
+}
+
+/* 삭제페이지 */
+.DefaultMyPage .DeleteArea h2 {
+  color: tomato;
 }
