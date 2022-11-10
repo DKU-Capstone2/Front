@@ -6,26 +6,6 @@ const Join = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>
-        <MyHeader
-          logo={<MyButton text={"Writers"} onClick={() => navigate("/")} />}
-          category={
-            <MyButton text={"Catgory"} onClick={() => navigate("/Category")} />
-          }
-          commision={
-            <MyButton
-              text={"Commision"}
-              onClick={() => navigate("/Commision")}
-            />
-          }
-          leftChild={
-            <MyButton text={"Login"} onClick={() => navigate("/Login")} />
-          }
-          rightChild={
-            <MyButton text={"Join"} onClick={() => navigate("/Join")} />
-          }
-        />
-      </div>
       <div class="signuppage">
         <div className="Title">
           <h1>SIGN UP</h1>
@@ -37,7 +17,7 @@ const Join = () => {
               <label for="email">E-MAIL</label>
             </h4>
             <div>
-              <input type="email" id="email" class="signUpForm" />
+              <input type="email" id="email" className="signUpForm" />
             </div>
           </div>
 
@@ -46,7 +26,7 @@ const Join = () => {
               <label for="passWord">PASSWORD</label>
             </h4>
             <div>
-              <input type="password" id="passWord" class="signUpForm" />
+              <input type="password" id="passWord" className="signUpForm" />
             </div>
             <h4>
               <label for="CheckUserPassword">PASSWORD CHECK</label>
@@ -55,7 +35,7 @@ const Join = () => {
               <input
                 type="password"
                 id="CheckUserPassword"
-                class="signUpForm"
+                className="signUpForm"
               />
             </div>
           </div>
@@ -65,7 +45,7 @@ const Join = () => {
               <label for="name">NAME</label>
             </h4>
             <div>
-              <input type="text" id="name" class="signUpForm" />
+              <input type="text" id="name" className="signUpForm" />
             </div>
           </div>
 
@@ -74,7 +54,7 @@ const Join = () => {
               <label for="phone_number">PHONE NUMBER</label>
             </h4>
             <div>
-              <input type="text" id="phone_number" class="signUpForm" />
+              <input type="text" id="phone_number" className="signUpForm" />
             </div>
           </div>
 
@@ -82,7 +62,7 @@ const Join = () => {
             <h4>
               <label for="role_input"></label>
             </h4>
-            <select class="role_input" name="role_input">
+            <select className="role_input" name="role_input">
               <option value selected>
                 ROLE
               </option>
@@ -93,7 +73,7 @@ const Join = () => {
           </div>
 
           <hr width="300px" />
-          <div class="checkAgreement">
+          <div className="checkAgreement">
             <input type="checkbox" />
             <span>(필수) 이용약관에 동의합니다.</span>
           </div>
@@ -149,16 +129,16 @@ const Join = () => {
               포함한다.
             </p>
           </div>
-          <div class="checkAgreement">
+          <div className="checkAgreement">
             <input type="checkbox" />
             <span> (필수) 개인정보 수집 및 이용에 동의합니다. </span>
           </div>
-          <div class="checkAgreement">
+          <div className="checkAgreement">
             <input type="checkbox" />
             <span>(필수) 만 19세 이상입니다.</span>
           </div>
 
-          <input type="submit" value="SIGN UP" className="signupbtn" />
+          <input type="submit" value="SIGN UP" className="submitBtn" />
         </form>
       </div>
     </div>

@@ -5,26 +5,7 @@ import MyHeader from "../components/MyHeader";
 const Introduce = () => {
   const navigate = useNavigate();
 
-  return (
-    <div>
-      <div>
-        <MyHeader
-          logo={<MyButton text={"Writers"} onClick={() => navigate("/")} />}
-          category={
-            <MyButton text={"Catgory"} onClick={() => navigate("/Category")} />
-          }
-          commision={
-            <MyButton
-              text={"Commision"}
-              onClick={() => navigate("/Commision")}
-            />
-          }
-          leftChild={<MyButton text={"My"} onClick={() => navigate("/My")} />}
-          rightChild={<MyButton text={"Logout"} />}
-        />
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Introduce;

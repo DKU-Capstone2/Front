@@ -11,7 +11,7 @@ const WriterState = [
   { value: 1, name: "접수 불가능" },
 ];
 
-const WriterProfile = ({ id, content, name, state }) => {
+const WriterProfile = ({ id, content, name, state, authenticated }) => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || " ";
 
@@ -26,6 +26,15 @@ const WriterProfile = ({ id, content, name, state }) => {
       return <Review />;
     }
     return;
+  };
+
+  const goCommision = () => {
+    if (authenticated === false) {
+      alert("로그인을 먼저 해주세요");
+      navigate("/Login");
+    } else {
+      navigate(`/New/${id}`);
+    }
   };
 
   const navigate = useNavigate();
@@ -43,10 +52,7 @@ const WriterProfile = ({ id, content, name, state }) => {
             <MyButton text={"관심작가 등록하기"} onClick={likefunction} />
           }
           thirdMenu={
-            <MyButton
-              text={"커미션 신청하기"}
-              onClick={() => navigate(`/New/${id}`)}
-            />
+            <MyButton text={"커미션 신청하기"} onClick={goCommision} />
           }
         />
       </div>

@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import MyButton from "./MyButton";
-import MyMenu from "./MyMenu";
+import { useNavigate } from "react-router-dom";
+import MyButton from "../components/MyButton";
+import MyMenu from "../components/MyMenu";
 
-const MyEditor = ({ onCreate }) => {
-  const { id } = useParams();
+const Requestform = ({ onRequest }) => {
   const navigate = useNavigate();
 
   const titleRef = useRef();
@@ -12,7 +11,7 @@ const MyEditor = ({ onCreate }) => {
 
   const [state, setState] = useState({
     title: "",
-    commisionContext: "",
+    RequestContext: "",
   });
 
   const handleChangeState = (e) => {
@@ -27,17 +26,17 @@ const MyEditor = ({ onCreate }) => {
       titleRef.current.focus();
       return;
     }
-    if (state.commisionContext.length < 1) {
+    if (state.RequestContext.length < 1) {
       contentRef.current.focus();
       return;
     }
-    onCreate(id, state.title, state.commisionContext);
+    onRequest(state.title, state.RequestContext);
     alert("신청이 완료되었습니다.");
-    navigate("/Commision", { replace: true });
+    navigate("/Request", { replace: true });
 
     setState({
       title: "",
-      commisionContext: "",
+      RequestContext: "",
     });
   };
 
@@ -47,14 +46,12 @@ const MyEditor = ({ onCreate }) => {
         <div>
           <MyMenu
             firstMenu={<MyButton text={"<"} onClick={() => navigate(-1)} />}
-            thirdMenu={
-              <MyButton text={"커미션 제출하기"} onClick={handleSubmit} />
-            }
+            thirdMenu={<MyButton text={"부탁하기!"} onClick={handleSubmit} />}
           />
         </div>
 
         <div className="MyEditor">
-          <h1 className="MyEditorTitle">커미션 신청하기</h1>
+          <h1 className="MyEditorTitle">이런 글 부탁해요!</h1>
           <div>
             <h2>신청 제목</h2>
             <input
@@ -69,8 +66,8 @@ const MyEditor = ({ onCreate }) => {
             <h2>커미션 내용</h2>
             <textarea
               ref={contentRef}
-              name="commisionContext"
-              value={state.commisionContext}
+              name="RequestContext"
+              value={state.RequestContext}
               onChange={handleChangeState}
             ></textarea>
           </div>
@@ -80,4 +77,4 @@ const MyEditor = ({ onCreate }) => {
   );
 };
 
-export default MyEditor;
+export default Requestform;

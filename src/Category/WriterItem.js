@@ -11,23 +11,20 @@ const sortCategoryList = [
   { value: 6, name: "기타" },
   { value: 7, name: "전체" },
 ];
-const WriterItem = ({
-  id,
-  name,
-  like_number,
-  main_category,
-  content,
-  genre,
-  Date,
-}) => {
+const WriterItem = ({ id, name, main_category, content, authenticated }) => {
   const navigate = useNavigate();
+
+  const goCommision = () => {
+    if (authenticated === false) {
+      alert("로그인을 먼저 해주세요");
+      navigate("/Login");
+    } else {
+      navigate(`/New/${id}`);
+    }
+  };
 
   const goDetail = () => {
     navigate(`/Writer/${id}`);
-  };
-
-  const goCommision = () => {
-    navigate(`/New/${id}`);
   };
 
   return (

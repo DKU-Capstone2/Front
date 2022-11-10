@@ -1,31 +1,25 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MyButton from "../components/MyButton";
-import MyHeader from "../components/MyHeader";
 
-const Login = () => {
+const Login = ({ login }) => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleCheck = () => {
+    try {
+      login({ email, password });
+      navigate("/", { replace: true });
+    } catch (e) {
+      alert("아이디 및 비밀번호를 다시 확인해주세요");
+      setEmail("");
+      setPassword("");
+    }
+  };
+
   return (
     <div>
-      <div>
-        <MyHeader
-          logo={<MyButton text={"Writers"} onClick={() => navigate("/")} />}
-          category={
-            <MyButton text={"Catgory"} onClick={() => navigate("/Category")} />
-          }
-          commision={
-            <MyButton
-              text={"Commision"}
-              onClick={() => navigate("/Commision")}
-            />
-          }
-          leftChild={
-            <MyButton text={"Login"} onClick={() => navigate("/Login")} />
-          }
-          rightChild={
-            <MyButton text={"Join"} onClick={() => navigate("/Join")} />
-          }
-        />
-      </div>
       <div class="loginpage">
         <div className="Title">
           <h1>LOGIN</h1>
@@ -33,14 +27,29 @@ const Login = () => {
         <div class="loginform">
           <form action="/" method="POST">
             <h3>E-MAIL</h3>
-            <input type="email" id="email" class="loginfield" />
-            <h3>Password</h3>
-            <input type="password" class="loginfield" id="password" />
             <input
-              type="submit"
+              type="email"
+              id="email"
+              className="loginfield"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <h3>Password</h3>
+            <input
+              type="password"
+              className="loginfield"
+              id="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            <input
+              type="button"
               value="LOGIN"
               id="password_check"
-              class="submitBtn"
+              className="submitBtn"
+              onClick={handleCheck}
             />
           </form>
           <div class="joinpage">

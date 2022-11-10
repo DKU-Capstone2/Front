@@ -29,7 +29,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
   );
 };
 
-const WriterList = ({ writerList }) => {
+const WriterList = ({ writerList, authenticated }) => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || "";
   const navigate = useNavigate();
@@ -74,10 +74,9 @@ const WriterList = ({ writerList }) => {
             optionList={filterOptionList}
           />
         </div>
-        <div className="right_col"></div>
       </div>
       {getProcessWriterList().map((it) => (
-        <WriterItem key={it.id} {...it} />
+        <WriterItem key={it.id} {...it} authenticated={authenticated} />
       ))}
     </div>
   );

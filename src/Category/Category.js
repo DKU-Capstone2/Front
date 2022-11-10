@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { WriterCategory } from "../App";
+import { AllWriter } from "../App";
 import MyButton from "../components/MyButton";
-import MyHeader from "../components/MyHeader";
 import CategoryList from "./CategoryList";
 import WriterList from "./WriterList";
 
@@ -17,10 +16,8 @@ const sortCategoryList = [
   { value: 7, name: "전체" },
 ];
 
-const Category = () => {
-  const navigate = useNavigate();
-
-  const writerList = useContext(WriterCategory);
+const Category = ({ authenticated }) => {
+  const writerList = useContext(AllWriter);
   const copyList = JSON.parse(JSON.stringify(writerList));
 
   const [data, setData] = useState(writerList);
@@ -68,22 +65,6 @@ const Category = () => {
   return (
     <div>
       <div>
-        <MyHeader
-          logo={<MyButton text={"Writers"} onClick={() => navigate("/")} />}
-          category={
-            <MyButton text={"Catgory"} onClick={() => navigate("/Category")} />
-          }
-          commision={
-            <MyButton
-              text={"Commision"}
-              onClick={() => navigate("/Commision")}
-            />
-          }
-          leftChild={<MyButton text={"My"} onClick={() => navigate("/My")} />}
-          rightChild={<MyButton text={"Logout"} />}
-        />
-      </div>
-      <div>
         <CategoryList
           type0={<MyButton text={"미지정"} onClick={typeReturn0} />}
           type1={<MyButton text={"단편소설"} onClick={typeReturn1} />}
@@ -95,7 +76,7 @@ const Category = () => {
           type7={<MyButton text={"전체"} onClick={typeReturn7} />}
           isSelected={true}
         />
-        <WriterList writerList={data} />
+        <WriterList writerList={data} authenticated={authenticated} />
       </div>
     </div>
   );

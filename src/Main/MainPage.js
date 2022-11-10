@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { WriterCategory } from "../App";
 import CategoryList from "../Category/CategoryList";
 import MyButton from "../components/MyButton";
-import MyHeader from "../components/MyHeader";
 import MyMenu from "../components/MyMenu";
 
-const MainPageAfter = () => {
+const MainPage = () => {
   const navigate = useNavigate();
 
   const env = process.env;
@@ -14,22 +13,6 @@ const MainPageAfter = () => {
 
   return (
     <div>
-      <div>
-        <MyHeader
-          logo={<MyButton text={"Writers"} onClick={() => navigate("/")} />}
-          category={
-            <MyButton text={"Catgory"} onClick={() => navigate("/Category")} />
-          }
-          commision={
-            <MyButton
-              text={"Commision"}
-              onClick={() => navigate("/Commision")}
-            />
-          }
-          leftChild={<MyButton text={"My"} onClick={() => navigate("/My")} />}
-          rightChild={<MyButton text={"Logout"} />}
-        />
-      </div>
       <div className="MainPage">
         <div className="writersImg">
           <img src={process.env.PUBLIC_URL + `img/mainpage.jpg`} />
@@ -95,4 +78,4 @@ const MainPageAfter = () => {
   );
 };
 
-export default MainPageAfter;
+export default MainPage;

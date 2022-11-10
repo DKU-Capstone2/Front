@@ -35,6 +35,7 @@ header > div {
 header button {
   width: 20%;
   font-size: 30px;
+  line-height: 30px;
   border: none;
   font-family: "Nanum Pen Script";
   color: #5e7e9b;
@@ -45,8 +46,8 @@ header .logo button {
   font-weight: bold;
 }
 
-header .commision {
-  margin-right: 580px;
+header .request {
+  margin-right: 400px;
 }
 
 .MyButton {
@@ -63,7 +64,7 @@ header .commision {
 
 .CategoryList {
   padding: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   background-color: aliceblue;
@@ -291,19 +292,20 @@ header .commision {
 
 .MyEditor .input_title {
   border: none;
-  width: 45%;
+  width: 500px;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   cursor: pointer;
   font-family: "Nanum Pen Script";
-  font-size: 20px;
+  font-size: 25px;
   background-color: #ececec;
+  color: #5e7e9b;
 }
 
 .MyEditor textarea {
   font-family: "Nanum Pen Script";
   font-size: 20px;
-  width: 50%;
+  width: 600px;
   box-sizing: border-box;
   min-height: 250px;
   resize: vertical;
@@ -311,6 +313,7 @@ header .commision {
   border-radius: 5px;
   background-color: #ececec;
   padding: 20px;
+  color: #5e7e9b;
 }
 
 .commisionform {
@@ -379,6 +382,11 @@ header .commision {
   width: 300px;
   border: 1px solid #5e7e9b;
   margin-top: 10px;
+  background-color: aliceblue;
+  color: #5e7e9b;
+  font-size: 25px;
+  padding: 5px;
+  font-family: "Nanum Pen Script";
 }
 
 .loginpage {
@@ -388,6 +396,9 @@ header .commision {
 
 .Title {
   padding-top: 10px;
+  width: 200px;
+  margin: 0 auto;
+  border-bottom: 3px solid #5e7e9b;
 }
 
 .loginform h3 {
@@ -401,13 +412,13 @@ header .commision {
 
 .submitBtn {
   font-size: 15px;
-  width: 308px;
+  width: 313px;
   line-height: 30px;
   font-weight: bold;
   font-size: 25px;
   margin-top: 30px;
   border: 1px solid #5e7e9b;
-  background-color: white;
+  background-color: aliceblue;
   font-family: "Nanum Pen Script";
   color: #5e7e9b;
 }
@@ -426,16 +437,22 @@ header .commision {
   height: 1200px;
   margin: 0 auto;
   margin-top: 100px;
-  background-color: white;
+  background-color: aliceblue;
   text-align: center;
   border-radius: 5px;
   color: #5e7e9b;
 }
+
 .signUpForm {
   font-size: 20px;
   width: 300px;
   height: 35px;
   border: 1px solid #5e7e9b;
+  background-color: aliceblue;
+  font-family: "Nanum Pen Script";
+  color: #5e7e9b;
+  font-size: 25px;
+  padding: 5px;
 }
 
 .signuppage h4 {
@@ -450,25 +467,13 @@ header .commision {
 .role_input {
   width: 308px;
   border: 1px solid #5e7e9b;
+  background-color: aliceblue;
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 25px;
   padding: 5px;
   color: #5e7e9b;
   font-family: "Nanum Pen Script";
-}
-
-.signupbtn {
-  font-size: 15px;
-  width: 308px;
-  line-height: 30px;
-  font-weight: bold;
-  margin-top: 30px;
-  border: 1px solid #5e7e9b;
-  color: #5e7e9b;
-  background-color: aliceblue;
-  font-family: "Nanum Pen Script";
-  font-size: 25px;
 }
 
 /* 이용약관 */
@@ -495,6 +500,35 @@ header .commision {
 
 /* 커미션 리스트 */
 
+.unLoginPage {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.unLoginPage h1 {
+  padding: 50px;
+  text-align: center;
+  color: #5e7e9b;
+}
+
+.unLoginPageArea {
+  text-align: center;
+}
+
+.unLoginPage .MyButton {
+  text-align: center;
+  width: 150px;
+  border: 1px solid #5e7e9b;
+  color: aliceblue;
+  background-color: #5e7e9b;
+  margin: 10px;
+  font-size: 20px;
+}
+
 .CommisionListBlock {
   margin-top: 30px;
 }
@@ -514,17 +548,18 @@ header .commision {
 }
 
 .CommisionArea {
+  overflow: hidden;
   margin-top: 10px;
 }
 
 .CommisionAreaDetail {
+  overflow: hidden;
   border-radius: 5px;
-  width: 100%;
-  height: 600px;
-  overflow: scroll;
+  height: 1000px;
   background-color: aliceblue;
   color: #5e7e9b;
   margin-top: 20px;
+  padding: 10px;
 }
 
 .CommisionAreaDetail h1 {
@@ -534,6 +569,70 @@ header .commision {
   margin: 0 auto;
   padding: 10px;
   margin-top: 20px;
+}
+
+.CommisionAreaDetail h2 {
+  text-align: center;
+}
+
+.CommisionWaitingTotal {
+  height: 850px;
+  overflow: scroll;
+}
+
+.CommisionWaitingTotal::-webkit-scrollbar {
+  display: none;
+}
+
+.CommisionItem {
+  border: 3px solid #5e7e9b;
+  width: 500px;
+  font-size: 25px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.itemIndex {
+  margin: 0 auto;
+  width: 400px;
+  border-bottom: 3px solid #5e7e9b;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.itemTitle {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.itemContext {
+  padding: 10px;
+}
+
+.itemContext textarea {
+  width: 400px;
+  min-height: 200px;
+  font-size: 20px;
+  color: #5e7e9b;
+  font-family: "Nanum Pen Script";
+  box-sizing: border-box;
+  resize: vertical;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.CommisionItem .MyButton {
+  width: 100px;
+  background-color: #5e7e9b;
+  color: aliceblue;
+  margin: 10px;
+  font-size: 20px;
 }
 
 /* 개인정보변경 페이지 */
@@ -598,6 +697,7 @@ header .commision {
   font-family: "Nanum Pen Script";
   padding: 5px;
   color: #5e7e9b;
+  background-color: aliceblue;
   margin-top: 5px;
 }
 
@@ -606,28 +706,30 @@ header .commision {
 }
 
 .changeStateDiv {
+  margin: 0 auto;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
   display: flex;
   justify-content: space-between;
-  width: 370px;
-  margin: 0 auto;
+  padding: 5px;
 }
 
-.changeStateDiv > div {
-  width: 50px;
-  height: 100px;
-  line-height: 100px;
+.nowState {
   font-size: 30px;
+  font-weight: bold;
 }
 
 .changeState {
-  width: 308px;
+  width: 120px;
   border: 1px solid #5e7e9b;
-  margin-top: 30px;
-  margin-bottom: 30px;
   font-size: 25px;
-  padding: 5px;
   color: #5e7e9b;
   font-family: "Nanum Pen Script";
+  background-color: aliceblue;
+  color: #5e7e9b;
+  padding: 5px;
 }
 
 /* 비밀번호변경 페이지 */
@@ -650,4 +752,137 @@ header .commision {
 /* 삭제페이지 */
 .DefaultMyPage .DeleteArea h2 {
   color: tomato;
+}
+
+/* 이런글 부탁해요! */
+.requestform {
+  margin-top: 30px;
+  color: #5e7e9b;
+}
+
+.requestform .MyMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.requestform .MyMenu .MyButton {
+  color: aliceblue;
+}
+
+.requestList {
+  height: 1000px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.requestList h1 {
+  margin: 0 auto;
+  color: #5e7e9b;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 3px solid #5e7e9b;
+  width: 600px;
+}
+
+.perRequest {
+  width: 1000px;
+  padding: 10px;
+  border: 1px solid #5e7e9b;
+  margin: 10px auto;
+  text-align: center;
+  color: #5e7e9b;
+  font-size: 20xp;
+  display: flex;
+  justify-content: space-between;
+}
+
+.RequestInfo {
+  display: flex;
+  width: 600px;
+}
+
+.RequestIndex {
+  width: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.RequestName {
+  width: 150px;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.RequestTitle {
+  width: 350px;
+  text-align: left;
+  padding: 5px;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.perRequest .MyButton {
+  font-size: 15px;
+  font-weight: bold;
+  font-size: 25px;
+  border: 1px solid #5e7e9b;
+  color: aliceblue;
+  background-color: #5e7e9b;
+  font-family: "Nanum Pen Script";
+}
+
+.requestContent {
+  height: 1000px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.requestContext {
+  width: 1000px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #5e7e9b;
+  margin-top: 30px;
+}
+
+.requestWho {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 30px;
+  text-align: center;
+  color: #5e7e9b;
+}
+
+.requestIndex {
+  width: 100px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: left;
+}
+
+.requestTitle {
+  width: 800px;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: left;
+}
+
+.requestName {
+  width: 300px;
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.requestDate {
+  border-bottom: 3px solid #5e7e9b;
+  color: #5e7e9b;
+  font-size: 30px;
+  text-align: right;
+  padding-right: 90px;
 }

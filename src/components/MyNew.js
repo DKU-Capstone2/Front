@@ -1,9 +1,9 @@
 import MyEditor from "./MyEditor";
 
-const MyNew = () => {
+const MyNew = ({ onCreate }) => {
   return (
     <div>
-      <MyEditor />
+      <MyEditor onCreate={onCreate} />
     </div>
   );
 };
